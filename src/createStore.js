@@ -1,7 +1,8 @@
 import { renderer }  from './index.js';
 
+
 export default function createStore(reducer) {
-  let state;
+  let state ;
 
   function dispatch(action) {
     state = reducer(state, action);
@@ -19,7 +20,7 @@ export default function createStore(reducer) {
   };
 
   return {
-    dispatch, 
+    dispatch,
     getState
   };
 };
